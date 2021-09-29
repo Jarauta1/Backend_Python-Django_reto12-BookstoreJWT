@@ -1,4 +1,4 @@
-"""api_bookstore URL Configuration
+"""apiBookstore URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -18,7 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('bookstore.urls')),
+    path('api/', include('bookstore.urls')),
     path('', include('rest_auth.urls')),
-    path('registration/', include('rest_auth.registration.urls')),
+    path('registration/', include('rest_auth.registration.urls'))
 ]

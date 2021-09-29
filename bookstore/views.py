@@ -6,7 +6,7 @@ from .serializers import AuthorSerializer, BookSerializer, UserSerializer
 from .models import Author, Book
 from django.contrib.auth.models import User
 
-from rest_framework.decorators import  api_view, permission_classes
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -30,4 +30,3 @@ class BookViewSet(viewsets.ModelViewSet):
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    lookup_field = ['username']
